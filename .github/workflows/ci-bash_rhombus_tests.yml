@@ -1,0 +1,42 @@
+name: Bash - Rhombus Test
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Test (1)
+      working-directory: /home/runner/work/spo/spo/
+      run: chmod +x draw_rhombus.sh && ./draw_rhombus.sh 1
+
+    - name: Test (2)
+      working-directory: /home/runner/work/spo/spo/
+      run: ./draw_rhombus.sh 2
+      
+    - name: Test (3)
+      working-directory: /home/runner/work/spo/spo/
+      run: ./draw_rhombus.sh 3
+      
+    - name: Test (4)
+      working-directory: /home/runner/work/spo/spo/
+      run: ./draw_rhombus.sh 4
+      
+    - name: Test (5)
+      working-directory: /home/runner/work/spo/spo/
+      run: ./draw_rhombus.sh 5
+      
+    - name: Test (6)
+      working-directory: /home/runner/work/spo/spo/
+      run: ./draw_rhombus.sh 6
+      
+    - name: Test (42)
+      working-directory: /home/runner/work/spo/spo/
+      run: ./draw_rhombus.sh 42
