@@ -1,6 +1,6 @@
 name: Bash - Rhombus Test
 
-on: [push]
+on: [fork]
 
 jobs:
   rhombus:
