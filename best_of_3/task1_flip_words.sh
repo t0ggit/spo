@@ -8,10 +8,10 @@ read -r -a words <<< $@
 # Number of words in array 'words'
 words_count=${#words[@]}
 
-# Printing words in reverse order
+# Printing words in reversed order
 for ((i=$words_count-1; i >= 0; i--)); do
 	echo -n "${words[$i]}"
-	# -n option to disable newline character appending
+	# -n option to disable \n appending
 
 	# Printing the separator between words except the last one
 	if [[ $i != 0 ]]; then
@@ -19,5 +19,5 @@ for ((i=$words_count-1; i >= 0; i--)); do
 	fi
 done
 
-echo '' # Printing newline character
+echo # \n
 exit 0
